@@ -16,6 +16,7 @@
 		5E994DEE2110111E00D7B760 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E994DED2110111E00D7B760 /* main.m */; };
 		5E994DF82110111E00D7B760 /* GeneralCountViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E994DF72110111E00D7B760 /* GeneralCountViewTests.m */; };
 		5E994E032110111E00D7B760 /* GeneralCountViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E994E022110111E00D7B760 /* GeneralCountViewUITests.m */; };
+		5E994E1321102B2200D7B760 /* CountUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E994E1121102B2200D7B760 /* CountUnitView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		5E994DFE2110111E00D7B760 /* GeneralCountViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeneralCountViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E994E022110111E00D7B760 /* GeneralCountViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneralCountViewUITests.m; sourceTree = "<group>"; };
 		5E994E042110111E00D7B760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E994E1121102B2200D7B760 /* CountUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountUnitView.m; sourceTree = "<group>"; };
+		5E994E1221102B2200D7B760 /* CountUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountUnitView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 		5E994DCF2110111D00D7B760 = {
 			isa = PBXGroup;
 			children = (
+				5E994E1021102B2200D7B760 /* GeneralCountView */,
 				5E994DDA2110111D00D7B760 /* GeneralCountView-Ex */,
 				5E994DF62110111E00D7B760 /* GeneralCountViewTests */,
 				5E994E012110111E00D7B760 /* GeneralCountViewUITests */,
@@ -134,6 +138,15 @@
 			);
 			path = GeneralCountViewUITests;
 			sourceTree = "<group>";
+		};
+		5E994E1021102B2200D7B760 /* GeneralCountView */ = {
+			isa = PBXGroup;
+			children = (
+				5E994E1121102B2200D7B760 /* CountUnitView.m */,
+				5E994E1221102B2200D7B760 /* CountUnitView.h */,
+			);
+			path = GeneralCountView;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -266,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E994DE02110111D00D7B760 /* ViewController.m in Sources */,
+				5E994E1321102B2200D7B760 /* CountUnitView.m in Sources */,
 				5E994DDD2110111D00D7B760 /* AppDelegate.m in Sources */,
 				5E994DEE2110111E00D7B760 /* main.m in Sources */,
 				5E994DE62110111D00D7B760 /* GeneralCountView.xcdatamodeld in Sources */,
