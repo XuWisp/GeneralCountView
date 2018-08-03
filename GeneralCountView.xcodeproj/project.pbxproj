@@ -17,6 +17,11 @@
 		5E994DF82110111E00D7B760 /* GeneralCountViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E994DF72110111E00D7B760 /* GeneralCountViewTests.m */; };
 		5E994E032110111E00D7B760 /* GeneralCountViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E994E022110111E00D7B760 /* GeneralCountViewUITests.m */; };
 		5E994E1321102B2200D7B760 /* CountUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E994E1121102B2200D7B760 /* CountUnitView.m */; };
+		5E994E1621102B8C00D7B760 /* DemoMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E994E1521102B8C00D7B760 /* DemoMainView.m */; };
+		5E994E1B211035C700D7B760 /* add_icon_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E994E17211035C700D7B760 /* add_icon_disable.png */; };
+		5E994E1C211035C700D7B760 /* icon_minus_nomal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E994E18211035C700D7B760 /* icon_minus_nomal.png */; };
+		5E994E1D211035C700D7B760 /* icon_minus_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E994E19211035C700D7B760 /* icon_minus_disable.png */; };
+		5E994E1E211035C700D7B760 /* add_icon_nomal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E994E1A211035C700D7B760 /* add_icon_nomal.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,12 @@
 		5E994E042110111E00D7B760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E994E1121102B2200D7B760 /* CountUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountUnitView.m; sourceTree = "<group>"; };
 		5E994E1221102B2200D7B760 /* CountUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountUnitView.h; sourceTree = "<group>"; };
+		5E994E1421102B8C00D7B760 /* DemoMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoMainView.h; sourceTree = "<group>"; };
+		5E994E1521102B8C00D7B760 /* DemoMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoMainView.m; sourceTree = "<group>"; };
+		5E994E17211035C700D7B760 /* add_icon_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_icon_disable.png; sourceTree = "<group>"; };
+		5E994E18211035C700D7B760 /* icon_minus_nomal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_minus_nomal.png; sourceTree = "<group>"; };
+		5E994E19211035C700D7B760 /* icon_minus_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_minus_disable.png; sourceTree = "<group>"; };
+		5E994E1A211035C700D7B760 /* add_icon_nomal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_icon_nomal.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +118,16 @@
 		5E994DDA2110111D00D7B760 /* GeneralCountView-Ex */ = {
 			isa = PBXGroup;
 			children = (
+				5E994E17211035C700D7B760 /* add_icon_disable.png */,
+				5E994E1A211035C700D7B760 /* add_icon_nomal.png */,
+				5E994E19211035C700D7B760 /* icon_minus_disable.png */,
+				5E994E18211035C700D7B760 /* icon_minus_nomal.png */,
 				5E994DDB2110111D00D7B760 /* AppDelegate.h */,
 				5E994DDC2110111D00D7B760 /* AppDelegate.m */,
 				5E994DDE2110111D00D7B760 /* ViewController.h */,
 				5E994DDF2110111D00D7B760 /* ViewController.m */,
+				5E994E1421102B8C00D7B760 /* DemoMainView.h */,
+				5E994E1521102B8C00D7B760 /* DemoMainView.m */,
 				5E994DE12110111D00D7B760 /* Main.storyboard */,
 				5E994DE72110111E00D7B760 /* Assets.xcassets */,
 				5E994DE92110111E00D7B760 /* LaunchScreen.storyboard */,
@@ -142,8 +159,8 @@
 		5E994E1021102B2200D7B760 /* GeneralCountView */ = {
 			isa = PBXGroup;
 			children = (
-				5E994E1121102B2200D7B760 /* CountUnitView.m */,
 				5E994E1221102B2200D7B760 /* CountUnitView.h */,
+				5E994E1121102B2200D7B760 /* CountUnitView.m */,
 			);
 			path = GeneralCountView;
 			sourceTree = SOURCE_ROOT;
@@ -253,7 +270,11 @@
 			files = (
 				5E994DEB2110111E00D7B760 /* LaunchScreen.storyboard in Resources */,
 				5E994DE82110111E00D7B760 /* Assets.xcassets in Resources */,
+				5E994E1E211035C700D7B760 /* add_icon_nomal.png in Resources */,
 				5E994DE32110111D00D7B760 /* Main.storyboard in Resources */,
+				5E994E1B211035C700D7B760 /* add_icon_disable.png in Resources */,
+				5E994E1D211035C700D7B760 /* icon_minus_disable.png in Resources */,
+				5E994E1C211035C700D7B760 /* icon_minus_nomal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +303,7 @@
 				5E994E1321102B2200D7B760 /* CountUnitView.m in Sources */,
 				5E994DDD2110111D00D7B760 /* AppDelegate.m in Sources */,
 				5E994DEE2110111E00D7B760 /* main.m in Sources */,
+				5E994E1621102B8C00D7B760 /* DemoMainView.m in Sources */,
 				5E994DE62110111D00D7B760 /* GeneralCountView.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,7 +475,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NXE5KCM6E6;
-				INFOPLIST_FILE = GeneralCountView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GeneralCountView-Ex/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,7 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NXE5KCM6E6;
-				INFOPLIST_FILE = GeneralCountView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GeneralCountView-Ex/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

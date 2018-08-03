@@ -8,6 +8,9 @@
 
 #import "CountUnitView.h"
 
+@interface CountUnitView () <UITextFieldDelegate>
+@end
+
 @implementation CountUnitView
 
 #pragma mark - Life Cycle
@@ -27,17 +30,15 @@
 
 - (UIButton *)subBtn {
     if (!_subBtn) {
-        _subBtn = [UIButton commonBtnWithType:(UIButtonTypeCustom)
-                                        Frame:(CGRectMake(0, 0, self.height, self.height))
-                                         text:@""
-                                       TColor:nil
-                                         font:nil
-                                         NImg:[UIImage imageNamed:@"icon_minus_nomal"]
-                                         SImg:[UIImage imageNamed:@"icon_minus_disable"]
-                                        BNImg:nil
-                                        BSImg:nil
-                                        color:nil];
-        _subBtn.tag = 1991; // 可短时间重复点击 Runtime
+        _subBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        _subBtn.frame = (CGRectMake(0, 0, self.frame.size.height, self.frame.size.height));
+        [_subBtn setTitle:@"-" forState:(UIControlStateNormal)];
+        [_subBtn setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
+        [_subBtn setTitleColor:[UIColor lightGrayColor] forState:(UIControlStateSelected)];
+
+        [_subBtn setImage:[UIImage imageNamed:@"icon_minus_nomal"] forState:(UIControlStateNormal)];
+        [_subBtn setImage:[UIImage imageNamed:@"icon_minus_disable"] forState:(UIControlStateSelected)];
+        _subBtn.selected = true;
         [_subBtn addTarget:self action:@selector(subBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
     }
     return _subBtn;
@@ -45,17 +46,14 @@
 
 - (UIButton *)addBtn {
     if (!_addBtn) {
-        _addBtn = [UIButton commonBtnWithType:(UIButtonTypeCustom)
-                                        Frame:(CGRectMake(self.width-self.height, 0, self.height, self.height))
-                                         text:@""
-                                       TColor:nil
-                                         font:nil
-                                         NImg:[UIImage imageNamed:@"add_icon_nomal"]
-                                         SImg:[UIImage imageNamed:@"add_icon_disable"]
-                                        BNImg:nil
-                                        BSImg:nil
-                                        color:nil];
-        _addBtn.tag = 1991; // 可短时间重复点击 Runtime
+        _addBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        _addBtn.frame = (CGRectMake(self.frame.size.width-self.frame.size.height, 0, self.frame.size.height, self.frame.size.height));
+        [_addBtn setTitle:@"+" forState:(UIControlStateNormal)];
+        [_addBtn setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
+        [_addBtn setTitleColor:[UIColor lightGrayColor] forState:(UIControlStateSelected)];
+
+        [_addBtn setImage:[UIImage imageNamed:@"add_icon_nomal"] forState:(UIControlStateNormal)];
+        [_addBtn setImage:[UIImage imageNamed:@"add_icon_disable"] forState:(UIControlStateSelected)];
         [_addBtn addTarget:self action:@selector(addBtnClick) forControlEvents:(UIControlEventTouchUpInside)];
     }
     return _addBtn;
@@ -63,12 +61,12 @@
 
 - (UITextField *)amountTF {
     if (!_amountTF) {
-        _amountTF = [[UITextField alloc] initWithFrame:(CGRectMake(self.height, 0, self.width-self.height*2, self.height))];
-        _amountTF.font = [UIFont systemFontOfSize:kImgFit(40)];
+        _amountTF = [[UITextField alloc] initWithFrame:(CGRectMake(self.frame.size.height, 0, self.frame.size.width-self.frame.size.height*2, self.frame.size.height))];
         _amountTF.text = @"1";
         _amountTF.textAlignment = NSTextAlignmentCenter; //水平居中
         _amountTF.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;  //垂直居中
         _amountTF.keyboardType = UIKeyboardTypeNumberPad;
+        _amountTF.delegate = self;
         [_amountTF addTarget:self action:@selector(changeTFValue) forControlEvents:(UIControlEventEditingChanged)];
     }
     return _amountTF;
@@ -97,7 +95,7 @@
     self.subBtn.selected = NO;
     self.addBtn.userInteractionEnabled = YES;
     self.addBtn.selected = NO;
-    if (![NSString isNumberString:self.amountTF.text]) {
+    if (![self isNumberString:self.amountTF.text]) {
         NSLog(@"请输入数字");
         self.amountTF.text = @"1";
         self.subBtn.userInteractionEnabled = NO;
@@ -137,5 +135,20 @@
         self.amountTF.text = @"1";
     }
 }
+
+#pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    [textField performSelector:@selector(selectAll:) withObject:nil afterDelay:0.0];
+}
+
+#pragma mark - other
+// 判断字符串是否纯数字 0-9
+- (BOOL)isNumberString:(NSString*)string {
+    NSScanner* scan = [NSScanner scannerWithString:string];
+    int val;
+    return[scan scanInt:&val] && [scan isAtEnd];
+}
+
 
 @end

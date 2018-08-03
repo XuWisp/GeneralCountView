@@ -15,6 +15,7 @@
 @property (nonatomic, strong) UIButton *subBtn;
 @property (nonatomic, assign) NSInteger maxNum;
 
+
 - (void)setAllBtnUserInteractionEnabled:(BOOL)isEnable;
 
 @end
