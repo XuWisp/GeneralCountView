@@ -14,6 +14,6 @@
 @property (nonatomic, strong) CountUnitView *countV;
 @property (nonatomic, strong) UITableView *tableV;
 
-@property (nonatomic, copy) NSArray cellDataArr;
+@property (nonatomic, copy) NSArray *cellDataArr;
 
 @end
